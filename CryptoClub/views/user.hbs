@@ -1,0 +1,45 @@
+
+{{#user}}
+{{!-- Profile --}}
+<div class="flex-column d-flex align-items-center">
+  {{!-- Username --}}
+  <div class="d-flex flex-row mb-3 mt-3">
+    {{name}}
+  </div>
+  {{!-- /Username --}}
+
+  {{!-- Headshot --}}
+  <div class="d-flex flex-row mb-3 mt-3">
+    <img src="https://pbs.twimg.com/profile_images/419422196013215745/PF4CMeY1.jpeg" class=" w-50 h-50 img-responsive rounded mx-auto d-block">
+  </div>
+  {{!-- /Headshot --}}
+
+  {{!-- Wallet Count --}}
+  {{#Wallets}}
+  <div class="d-flex flex-row mb-3 mt-3 align-items-center">
+    <div class="rounded-pill mr-3">{{type}}</div>
+    <span class="mx-25 center badge badge-primary badge-pill mr-3">{{balance}}</span>
+
+  </div>
+  {{/Wallets}}
+  {{!-- /Wallet Count --}}
+</div>
+{{!-- /Profile --}}
+{{!-- Comments --}}
+{{#Comments}}
+<div class="flex-column d-flex align-items-center">
+  {{!-- C1 --}}
+  <div class="d-flex flex-row">
+    <div class="card mx-25">
+      <div class="card-body">
+        <h5 class="card-title">Comment on the state of: {{crypto}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Prediction: {{prediction}}</h6>
+        <p class="card-text">{{text}}</p>
+      </div>
+    </div>
+  </div>
+  {{!-- /C1 --}}
+</div>
+{{/Comments}}
+{{!-- /Comments --}}
+{{/user}}

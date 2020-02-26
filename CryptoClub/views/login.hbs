@@ -1,0 +1,35 @@
+<div class="container">
+
+<div class="row col-10 pb-2 mb-2 mt-2 border-bottom">
+	Login to get access to our site's features!
+</div>
+
+<div class="row col-10 justify-content-md-center mt-5">
+
+<div class="card" style="width: 36rem;">
+  <div class="card-body">
+    <h5 class="card-title">Login Details</h5>
+
+    <form method="POST" action="/login">
+		<div class="form-group">
+			<label for="exampleInputEmail1">Username</label>
+		    <input type="textbox" name="name" class="form-control" placeholder="username" value="{{username}}">
+		</div>
+		<div class="form-group">
+		    <label for="exampleInputPassword1">Password</label>
+		    <input type="password" name="password" class="form-control" placeholder="password">
+		</div>
+		{{#listOfErrors}}
+	    <div class="alert-danger p-2 mb-2">
+	    	<ul>
+	    		<li>{{this}}</li>
+	    	</ul>
+	   	</div>
+	   	{{/listOfErrors}}
+		<button type="submit" name="login_btn" value="pressed" class="btn btn-primary">Login</button>
+	</form>
+  </div>
+</div>
+
+</div>
+</div>

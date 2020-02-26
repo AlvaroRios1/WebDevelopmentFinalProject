@@ -1,0 +1,33 @@
+
+<div class="list-group">
+  {{#users}}
+  {{!-- Super Row --}}
+  <div class="list-group-item flex-row d-flex mb-3 mt-3">
+    {{!-- Profile --}}
+    <a href = "/user?id={{id}}" class="flex-column d-flex align-items-center list-group-item-action">
+      {{!-- Username --}}
+      <div class="d-flex flex-row mb-3 mt-3">
+        {{name}}
+      </div>
+      {{!-- /Username --}}
+
+      {{!-- Headshot --}}
+      <div class="d-flex flex-row mb-3 mt-3">
+        <img src="https://pbs.twimg.com/profile_images/419422196013215745/PF4CMeY1.jpeg" class=" w-50 h-50 img-responsive rounded mx-auto d-block">
+      </div>
+      {{!-- /Headshot --}}
+
+      {{!-- Wallet Count --}}
+      <div class="d-flex flex-row mb-3 mt-3 align-items-center">
+        {{#Wallets}}
+        <div class="rounded-pill mr-3">{{type}}</div>
+        <span class="mx-25 center badge badge-primary badge-pill mr-3">{{balance}}</span>
+        {{/Wallets}}
+      {{!-- /Wallet Count --}}
+      </div>
+    </a>
+    {{!-- /Profile --}}
+  </div>
+  {{!-- Super Row --}}
+  {{/users}}
+</div>
